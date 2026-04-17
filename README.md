@@ -1,61 +1,99 @@
-# Deep Learning Journey 🚀
+# 🚀 Deep Learning Journey (PyTorch)
 
-This repository documents my hands-on learning journey in deep learning using PyTorch, progressing from fundamentals to real-world projects.
+This repository documents my **hands-on journey into deep learning**, progressing from core fundamentals to real-world machine learning pipelines.
+
+It focuses on **learning by building**, not just theory.
+
+---
+
+## 🧠 What This Repository Represents
+
+* Understanding deep learning from first principles
+* Moving from manual implementations → PyTorch abstractions
+* Working with **real-world messy datasets**
+* Building complete **end-to-end ML pipelines**
+* Experimenting, debugging, and improving models
+
+---
 
 ## 📚 Topics Covered
 
-1. **Tensor Operations & Autograd**
+### 1. 🧮 Tensor Operations & Autograd
 
-   * Tensor creation, operations, gradients
+* Tensor creation & operations
+* Gradient computation (`backward`)
+* Understanding computation graphs
 
-2. **Linear Regression (Manual)**
+---
 
-   * Gradient descent from scratch
-   * MSE loss implementation
+### 2. 📉 Linear Regression (Manual)
 
-3. **Linear Regression with PyTorch (`nn`)**
+* Gradient descent from scratch
+* Manual parameter updates
+* MSE loss implementation
 
-   * Using `nn.Linear`, `MSELoss`, and optimizers
+---
 
-4. **Activation Functions**
+### 3. ⚙️ Linear Regression with PyTorch
 
-   * ReLU, GELU, Softmax
-   * Understanding non-linearity
+* `nn.Linear`, `MSELoss`
+* Optimizers (`SGD`, `Adam`)
+* Training loop abstraction
 
-5. **California Housing Price Prediction (Regression)**
+---
 
-   * Real dataset
-   * Data normalization
-   * Neural network regression
+### 4. 🔥 Activation Functions
 
-6. **Wine Classification (DataLoader + NN)**
+* ReLU, GELU, Softmax
+* Role of non-linearity in neural networks
 
-   * Custom Dataset
-   * DataLoader batching
-   * Multi-class classification
+---
 
-7. **Titanic Survival Prediction (Classification)**
+### 5. 🏠 California Housing (Regression)
 
-   * Real-world messy dataset
-   * Data preprocessing & encoding
-   * Feature engineering
-   * Model training & evaluation
+* Real dataset
+* Feature normalization
+* Neural network regression
+
+---
+
+### 6. 🍷 Wine Classification (DataLoader + NN)
+
+* Custom `Dataset` class
+* `DataLoader` batching & shuffling
+* Multi-class classification using CrossEntropy
+
+---
+
+### 7. 🚢 Titanic Survival Prediction
+
+* Handling missing values
+* Encoding categorical features
+* Feature engineering
+* Binary classification pipeline
+
+---
+
+### 8. 🏆 House Price Prediction (Kaggle-Level)
+
+* Highly messy dataset
+* Advanced preprocessing & encoding
+* 200+ feature handling
+* Model comparison:
+
+  * Neural Network (PyTorch)
+  * Random Forest
+  * XGBoost
 
 ---
 
 ## 🎯 Goal
 
-To build a strong foundation in deep learning through **hands-on implementation**, focusing on understanding core concepts and applying them to real datasets.
+To build a **strong and practical foundation in deep learning** through:
 
----
-
-## 🧠 What This Repository Shows
-
-* From-scratch implementation → framework usage
-* Handling real-world messy data
-* Building complete ML pipelines
-* Transition from full-batch to mini-batch training
-* Regression and classification workflows
+* consistent experimentation
+* real-world problem solving
+* understanding model behavior (not just using it)
 
 ---
 
@@ -65,19 +103,34 @@ To build a strong foundation in deep learning through **hands-on implementation*
 * PyTorch
 * NumPy
 * Pandas
+* Scikit-learn
+* XGBoost
 
 ---
 
-## 🚀 Progression
-
-This repository follows a structured path:
+## 📈 Learning Progression
 
 ```text
-Basics → Models → Neural Networks → Real Datasets → Pipelines
+Foundations → Manual Models → PyTorch → Neural Networks → Real Data → Advanced Pipelines
 ```
 
 ---
 
-## 📌 Note
+## 🔍 Key Takeaways
 
-This is a learning-focused repository where each module represents a step in understanding deep learning concepts through practice rather than theory alone.
+* Understanding data is more important than model complexity
+* Proper preprocessing significantly impacts performance
+* Neural networks are not always the best choice (tabular ≠ NN-friendly)
+* Iteration and experimentation drive improvement
+
+---
+
+## 🚧 Status
+
+This repository is continuously evolving as I learn, experiment, and improve.
+
+---
+
+## 🙌 Author
+
+Shreya
