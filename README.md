@@ -1,84 +1,85 @@
 # 🚀 Deep Learning Journey (PyTorch)
 
-This repository documents my **hands-on journey into deep learning**, progressing from core fundamentals to real-world machine learning pipelines.
+This repository documents my **hands-on journey into deep learning**, progressing from core fundamentals to building **end-to-end machine learning systems** using real-world data.
 
-It focuses on **learning by building**, not just theory.
+The focus is on:
 
----
-
-## 🧠 What This Repository Represents
-
-* Understanding deep learning from first principles
-* Moving from manual implementations → PyTorch abstractions
-* Working with **real-world messy datasets**
-* Building complete **end-to-end ML pipelines**
-* Experimenting, debugging, and improving models
+> **learning by building, debugging, and analyzing model behavior — not just theory**
 
 ---
 
-## 📚 Topics Covered
+## 🧠 What This Repository Demonstrates
 
-### 1. 🧮 Tensor Operations & Autograd
+* Strong understanding of **deep learning fundamentals**
+* Ability to build **custom ML pipelines from scratch**
+* Working with **real-world noisy datasets**
+* Model training, evaluation, and debugging
+* Comparing multiple approaches (NN vs classical ML)
 
-* Tensor creation & operations
-* Gradient computation (`backward`)
+---
+
+## 📚 Topics & Projects
+
+### 🧮 Tensor Operations & Autograd
+
+* Tensor manipulation using PyTorch
+* Backpropagation (`backward`)
 * Understanding computation graphs
 
 ---
 
-### 2. 📉 Linear Regression (Manual)
+### 📉 Linear Regression (From Scratch)
 
-* Gradient descent from scratch
-* Manual parameter updates
-* MSE loss implementation
+* Manual gradient descent implementation
+* Parameter updates without libraries
+* MSE loss derivation
 
 ---
 
-### 3. ⚙️ Linear Regression with PyTorch
+### ⚙️ Linear Regression with PyTorch
 
 * `nn.Linear`, `MSELoss`
 * Optimizers (`SGD`, `Adam`)
-* Training loop abstraction
+* Abstracted training loop
 
 ---
 
-### 4. 🔥 Activation Functions
+### 🔥 Activation Functions
 
 * ReLU, GELU, Softmax
-* Role of non-linearity in neural networks
+* Impact of non-linearity on model performance
 
 ---
 
-### 5. 🏠 California Housing (Regression)
+### 🏠 California Housing (Regression)
 
-* Real dataset
-* Feature normalization
-* Neural network regression
-
----
-
-### 6. 🍷 Wine Classification (DataLoader + NN)
-
-* Custom `Dataset` class
-* `DataLoader` batching & shuffling
-* Multi-class classification using CrossEntropy
+* Real-world dataset
+* Feature scaling & preprocessing
+* Neural network regression pipeline
 
 ---
 
-### 7. 🚢 Titanic Survival Prediction
+### 🍷 Wine Classification
 
-* Handling missing values
-* Encoding categorical features
+* Custom `Dataset` + `DataLoader`
+* Multi-class classification (CrossEntropyLoss)
+* Batch training and evaluation
+
+---
+
+### 🚢 Titanic Survival Prediction
+
+* Missing value handling
 * Feature engineering
-* Binary classification pipeline
+* Categorical encoding
+* Binary classification model
 
 ---
 
-### 8. 🏆 House Price Prediction (Kaggle-Level)
+### 🏆 House Price Prediction (Advanced Pipeline)
 
-* Highly messy dataset
-* Advanced preprocessing & encoding
-* 200+ feature handling
+* Highly complex tabular dataset
+* Extensive preprocessing (200+ features)
 * Model comparison:
 
   * Neural Network (PyTorch)
@@ -87,13 +88,23 @@ It focuses on **learning by building**, not just theory.
 
 ---
 
-## 🎯 Goal
+### 🐱🐶 Cat vs Dog Image Classification (CNN)
 
-To build a **strong and practical foundation in deep learning** through:
+* Custom image dataset pipeline
+* Data augmentation (color, rotation, blur)
+* CNN built from scratch
+* Validation + real-world testing
+* Analysis of **model failure under extreme conditions**
 
-* consistent experimentation
-* real-world problem solving
-* understanding model behavior (not just using it)
+---
+
+## 📊 Key Learnings
+
+* Data quality and preprocessing are critical
+* Model confidence ≠ correctness
+* Neural networks are not always optimal for tabular data
+* Generalization is harder than training accuracy
+* Real-world testing reveals model weaknesses
 
 ---
 
@@ -111,23 +122,27 @@ To build a **strong and practical foundation in deep learning** through:
 ## 📈 Learning Progression
 
 ```text
-Foundations → Manual Models → PyTorch → Neural Networks → Real Data → Advanced Pipelines
+Foundations → Manual Models → PyTorch → Neural Networks → Real Data → Model Analysis
 ```
 
 ---
 
-## 🔍 Key Takeaways
+## 🚀 Highlights
 
-* Understanding data is more important than model complexity
-* Proper preprocessing significantly impacts performance
-* Neural networks are not always the best choice (tabular ≠ NN-friendly)
-* Iteration and experimentation drive improvement
+* Built models from scratch and with frameworks
+* Implemented full ML pipelines independently
+* Explored model limitations using real-world edge cases
+* Compared deep learning with traditional ML methods
 
 ---
 
 ## 🚧 Status
 
-This repository is continuously evolving as I learn, experiment, and improve.
+Actively expanding with:
+
+* Transfer Learning (ResNet)
+* Cat Breed Classification Project
+* Model explainability & visualization
 
 ---
 
