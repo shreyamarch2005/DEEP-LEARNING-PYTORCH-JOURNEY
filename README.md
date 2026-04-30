@@ -12,8 +12,9 @@ The focus is on:
 
 * Strong understanding of **deep learning fundamentals**
 * Ability to build **custom ML pipelines from scratch**
+* Experience with **transfer learning (ResNet)**
 * Working with **real-world noisy datasets**
-* Model training, evaluation, and debugging
+* Model training, evaluation, debugging, and improvement
 * Comparing multiple approaches (NN vs classical ML)
 
 ---
@@ -88,13 +89,23 @@ The focus is on:
 
 ---
 
-### 🐱🐶 Cat vs Dog Image Classification (CNN)
+### 🐱🐶 Cat vs Dog Image Classification
+
+#### 🔹 CNN (From Scratch)
 
 * Custom image dataset pipeline
 * Data augmentation (color, rotation, blur)
-* CNN built from scratch
+* CNN architecture built manually
 * Validation + real-world testing
 * Analysis of **model failure under extreme conditions**
+
+#### 🔹 Transfer Learning (ResNet)
+
+* Used pretrained **ResNet18** for image classification
+* Replaced final classification layer for custom task
+* Implemented **feature extraction (frozen layers)** and fine-tuning
+* Compared performance with custom CNN
+* Improved generalization and training efficiency
 
 ---
 
@@ -102,6 +113,7 @@ The focus is on:
 
 * Data quality and preprocessing are critical
 * Model confidence ≠ correctness
+* Transfer learning significantly improves performance on limited data
 * Neural networks are not always optimal for tabular data
 * Generalization is harder than training accuracy
 * Real-world testing reveals model weaknesses
@@ -122,7 +134,7 @@ The focus is on:
 ## 📈 Learning Progression
 
 ```text
-Foundations → Manual Models → PyTorch → Neural Networks → Real Data → Model Analysis
+Foundations → Manual Models → PyTorch → CNN → Transfer Learning → Real Data → Model Analysis
 ```
 
 ---
@@ -131,6 +143,7 @@ Foundations → Manual Models → PyTorch → Neural Networks → Real Data → 
 
 * Built models from scratch and with frameworks
 * Implemented full ML pipelines independently
+* Applied **transfer learning for real-world image tasks**
 * Explored model limitations using real-world edge cases
 * Compared deep learning with traditional ML methods
 
@@ -140,8 +153,8 @@ Foundations → Manual Models → PyTorch → Neural Networks → Real Data → 
 
 Actively expanding with:
 
-* Transfer Learning (ResNet)
-* Cat Breed Classification Project
+* Cat Breed Classification (Multi-class, fine-grained classification)
+* Streamlit deployment for interactive predictions
 * Model explainability & visualization
 
 ---

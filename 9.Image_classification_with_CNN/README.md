@@ -1,10 +1,15 @@
-# 🐱🐶 Cat vs Dog Image Classifier (CNN)
+# 🐱🐶 Cat vs Dog Image Classifier (CNN + ResNet)
 
 ## 📌 Overview
 
-This project implements a Convolutional Neural Network (CNN) from scratch using PyTorch to classify images of cats and dogs.
+This project implements both:
 
-The model is trained on a real-world dataset and evaluated using validation loss and custom test images.
+* A **Convolutional Neural Network (CNN)** built from scratch
+* A **Transfer Learning approach using ResNet18**
+
+to classify images of cats and dogs using PyTorch.
+
+The models are trained on a real-world dataset and evaluated using validation loss and custom test images.
 
 ---
 
@@ -13,6 +18,8 @@ The model is trained on a real-world dataset and evaluated using validation loss
 * Custom PyTorch Dataset class
 * Data augmentation for robustness
 * CNN architecture built from scratch
+* Transfer Learning using pretrained ResNet18
+* Feature extraction (frozen layers) + fine-tuning
 * GPU support (if available)
 * Training + Validation pipeline
 * Real-world image testing
@@ -38,7 +45,7 @@ PetImages/
 
 ## 🔧 Data Preprocessing
 
-Includes:
+### CNN Input (64×64)
 
 * Resize (64x64)
 * Random rotation & flipping
@@ -47,13 +54,20 @@ Includes:
 * Random grayscale
 * Normalization
 
-These augmentations help the model generalize to real-world conditions.
+### ResNet Input (224×224)
+
+* Resize (224x224)
+* Random horizontal flip
+* Color jitter
+* Normalization
+
+These augmentations improve generalization across different lighting and image conditions.
 
 ---
 
 ## 🏗️ Model Architecture
 
-CNN Structure:
+### 🔹 CNN (From Scratch)
 
 * Conv2D → ReLU → MaxPool
 * Conv2D → ReLU → MaxPool
@@ -63,31 +77,50 @@ CNN Structure:
 
 ---
 
+### 🔹 ResNet18 (Transfer Learning)
+
+* Pretrained on ImageNet
+* Frozen convolutional layers (feature extractor)
+* Replaced final fully connected layer:
+
+```
+512 → 2 classes (Cat, Dog)
+```
+
+* Optional fine-tuning of deeper layers
+
+---
+
 ## ⚙️ Training Details
+
+### CNN
 
 * Optimizer: Adam
 * Learning Rate: 0.001
-* Loss Function: CrossEntropyLoss
 * Epochs: 12
 * Batch Size: 32
+
+### ResNet
+
+* Optimizer: Adam (FC layer initially)
+* Learning Rate: 0.001
+* Epochs: 5–10 (faster convergence)
+* Batch Size: 16–32
 
 ---
 
 ## 📊 Results
 
-Training Loss (final):
+### CNN
 
-```
-~0.35
-```
+* Training Loss: ~0.35
+* Validation Loss: ~0.34
 
-Validation Loss:
+### ResNet
 
-```
-0.34
-```
-
-The model shows consistent learning and generalization.
+* Faster convergence
+* Better generalization
+* More stable predictions on unseen images
 
 ---
 
@@ -96,20 +129,24 @@ The model shows consistent learning and generalization.
 Example:
 
 ```
-Prediction: Cat
-Confidence: [0.64, 0.36]
+Prediction: Cat (92.3%)
 ```
+
+Confidence is computed using softmax probabilities.
 
 ---
 
 ## ⚠️ Observations & Limitations
 
-* Model performs well on normal images
-* Struggles with:
+* CNN struggles with:
 
   * extreme lighting conditions
   * heavy color distortions
-* Shows bias toward learned patterns (distribution shift)
+
+* ResNet improves robustness but still:
+
+  * can be overconfident
+  * struggles with distribution shift
 
 ---
 
@@ -117,34 +154,34 @@ Confidence: [0.64, 0.36]
 
 * Data augmentation improves robustness
 * Model confidence ≠ correctness
-* Small CNNs have limited generalization
+* Transfer learning significantly improves performance
+* Pretrained models generalize better than small CNNs
 * Real-world testing is critical
 
 ---
 
 ## 🚀 Future Improvements
 
-* Transfer Learning (ResNet)
-* Higher resolution inputs (224x224)
-* Better dataset diversity
-* Cat breed classification extension
-* Model deployment (web app)
+* Cat breed classification (multi-class problem)
+* Fine-tuning deeper ResNet layers
+* Higher dataset diversity
+* Model deployment (Streamlit app)
+* Explainability (Grad-CAM / feature visualization)
 
 ---
 
 ## 💡 Author Notes
 
-This project was built as a hands-on deep learning exploration, focusing on:
+This project focuses on:
 
-* building from scratch
-* debugging training issues
-* analyzing model behavior on edge cases
+* building models from scratch
+* understanding transfer learning
+* debugging real-world issues
+* analyzing model behavior beyond metrics
 
 ---
 
 ## 📌 Next Step
 
-➡️ Upgrade to Transfer Learning (ResNet)
-➡️ Build Cat Breed Classifier
-
----
+➡️ Cat Breed Classification (12 classes)
+➡️ End-to-End ML App (Streamlit)
